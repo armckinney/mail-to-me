@@ -8,7 +8,7 @@ Creation Date: 8/16/2020
 # importing dependencies
 import smtplib
 from email.mime.text import MIMEText
-
+from importz import p, u
 
 def send_mail(to_mail, form_data):
     port = 587
@@ -50,8 +50,8 @@ def send_mail(to_mail, form_data):
     
     message = message + end_msg
 
-    corn = 'app'
-    guin = '!'
+    corn = p
+    guin = u
 
     # forming message structure
     msg = MIMEText(message, 'html')
