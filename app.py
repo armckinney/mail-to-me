@@ -10,11 +10,11 @@ from data_packs import form_dict
 from send_mail import send_mail
 
 ### DEV TOOLS ###
-dev_mode = True
+dev_mode = False
 
 
 # Flask App Setup
-app = Flask(__name__, static_folder='Images')
+app = Flask(__name__, static_folder='static')
 
 
 
