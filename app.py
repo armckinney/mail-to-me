@@ -47,11 +47,11 @@ def post(to_mail, field_list):
 
         # returning successful post webpage
         return render_template("post.html", form_data = form_data, to_mail = to_mail)
-    
+        
 
     # returning unseccessful post webpage
     except:
-        return render_template("nopost.html", form_data = form_data, to_mail = to_mail)
+        return render_template("nopost.html")
 
 
 if __name__ == "__main__":
