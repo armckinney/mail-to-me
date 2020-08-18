@@ -38,7 +38,11 @@ def post(to_mail, field_list):
 
     try:
         # extracting form data
-        to_mail = to_mail
+        if to_mail != "demoform":
+            to_mail = to_mail
+        else:
+            to_mail = form_data['to_mail']
+
         field_list = field_list.split(",")
         form_data = form_dict(field_list)
 

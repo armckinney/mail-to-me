@@ -17,10 +17,7 @@ def send_mail(to_mail, form_data):
     pen = 'mail2me'
     
     sender_email = form_data['sender_email']
-    if to_mail != "demoform":
-        to_email = to_mail
-    else:
-        to_email = form_data['to_mail']
+    to_email = to_mail
 
     # generating email message
     message = f'''
