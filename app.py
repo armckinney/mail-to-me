@@ -38,13 +38,14 @@ def post(to_mail, field_list):
 
     try:
         # extracting form data
+        field_list = field_list.split(",")
+        form_data = form_dict(field_list)
+
+        # determining receiver email
         if to_mail != "demoform":
             to_mail = to_mail
         else:
             to_mail = form_data['to_mail']
-
-        field_list = field_list.split(",")
-        form_data = form_dict(field_list)
 
         # sending email
         send_mail(to_mail, form_data)
