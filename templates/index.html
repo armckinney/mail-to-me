@@ -98,9 +98,11 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <div class="media" style="margin-bottom: 75px;">
-      <img src="static/Images/mailtome_pfd_crop.png" class="mr-3" alt="...">
-      <div class="media-body">
+    <div class="row">
+      <div class="media col-md-6" style="margin-bottom: 75px;">
+        <img src="../../static/Images/mailtome_pfd_crop.png" class="mr-3" alt="..." style="max-width: 100%;">
+      </div>
+      <div class="media-body col-md-6" style="width: 100%; margin-bottom: 75px;">
         <h4 class="mt-0" style="color: blue;">How do I work?</h4>
         1. An HTML Form is filled out by a user, the user submits the form.
         <br>
@@ -114,23 +116,28 @@
       </div>
     </div>
 
-    <div class="media" style="margin-bottom: 100px;">
-      <div class="media-body">
-        <h4 class="mt-0" style="color: green;">How do I used Mail-To-Me?</h4>
-          Mail-To-Me is easy to start using. There is no back-end to set up to start receiving emails.
-          <br><br>
+    <div class="row">
+      <div class="media col-md-12">
+        <div class="media-body">
+          <h4 class="mt-0" style="color: green;">How do I used Mail-To-Me?</h4>
+            Mail-To-Me is easy to start using. There is no back-end to set up to start receiving emails.
+            <br><br>
 
-          In order to start receiving emails:
-          <br>
-          1. Find the HTML form you would like to submit data from.
-          <br>
-          2. Enter ensure that your form has the following <strong style="color: red;">criteria</strong>:
-          
-          <pre>
+            In order to start receiving emails:
+            <br>
+            1. Find the HTML form you would like to submit data from.
+            <br>
+            2. Enter ensure that your form has the following <strong style="color: red;">criteria</strong>:
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <pre>
           <code>
           <br>
           &lt;!-- Contact Form --&gt;
-	  &lt;section id="contact" class="wrapper style4 vh-height">
+    &lt;section id="contact" class="wrapper style4 vh-height">
             &lt;div class="inner">
               &lt;section>
                   &lt;h4>Contact&lt;/h4>
@@ -166,24 +173,28 @@
               &lt;/section>
           </code>
         </pre>
-        <br>
-        <h3>Notes:</h3>
-        <ul>
-          <li>Method Must be "post"</li>
-          <li>Action must go to specified Route shown</li>
-            <ul>
-              <li>Fill in your_email_address with the designated receiving email address</li>
-              <li>Fill in the field list with the TEXT based fields in your form. There is only 1 required field that must be sent - sender_email. "sender_email" MUST be labeled as such in both the field list and in the input name.</li>
-            </ul>
-          <li>All Form Inputs Fields must have the corresponding name given to them. i.e. if I place "Subject" in the field_list then I must have an input field that has name="Subject".</li>
-          <li>Example(s):</li>
-            <ul>
-              <li>action="https://mailtome.herokuapp.com/form_submit/john_doe@gmail.com/Name,Subject,Message,sender_email"</li>
-              <li>&lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Subject" /></li>
-            </ul>
-        </ul>
       </div>
     </div>
+    
+    <div class="row">
+      <div class="col-md-12" style="margin-bottom: 100px;">
+            <h3>Notes:</h3>
+            <ul>
+              <li>Method Must be "post"</li>
+              <li>Action must go to specified Route shown</li>
+                <ul>
+                  <li>Fill in your_email_address with the designated receiving email address</li>
+                  <li>Fill in the field list with the TEXT based fields in your form. There is only 1 required field that must be sent - sender_email. "sender_email" MUST be labeled as such in both the field list and in the input name.</li>
+                </ul>
+              <li>All Form Inputs Fields must have the corresponding name given to them. i.e. if I place "Subject" in the field_list then I must have an input field that has name="Subject".</li>
+              <li>Example(s):</li>
+                <ul>
+                  <li class="text-break">action="https://mailtome.herokuapp.com/form_submit/john_doe@gmail.com/Name,Subject,Message,sender_email"</li>
+                  <li>&lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Subject" /></li>
+                </ul>
+            </ul>
+        </div>
+      </div>
 
   </div>
   
