@@ -14,7 +14,7 @@ def send_mail(to_mail, form_data):
     port = 587
     smtp_server = 'smtp.gmail.com'
     uni = 'mailtome'
-    pen = 'mail2me'
+    pen = 'zxnwfbyvy'
     
     sender_email = form_data['sender_email']
     to_email = to_mail
