@@ -14,10 +14,10 @@ Version Author: Drew McKinney
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-![GitHub last commit](https://img.shields.io/github/last-commit/ARMcK-hub/Mail-To-Me)
+![GitHub last commit](https://img.shields.io/github/last-commit/ARMcK-hub/mail-to-me)
 [![MIT License][license-shield]][license-url]
-![GitHub top language](https://img.shields.io/github/languages/top/ARMcK-hub/Mail-To-Me)
-![GitHub repo size](https://img.shields.io/github/repo-size/ARMcK-hub/Mail-To-Me)
+![GitHub top language](https://img.shields.io/github/languages/top/ARMcK-hub/mail-to-me)
+![GitHub repo size](https://img.shields.io/github/repo-size/ARMcK-hub/mail-to-me)
 ![Website](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fwestendfinancial.herokuapp.com%2F)
 
 <!-- PROJECT LOGO -->
@@ -34,9 +34,9 @@ Version Author: Drew McKinney
     <br />
     <a href="https://mailtome.herokuapp.com/" target="_blank"><strong> >> Visit Demo >> </strong></a>
     <br />
-    <a href="https://github.com/ARMcK-hub/Mail-To-Me/issues">Report Bug</a>
+    <a href="https://github.com/ARMcK-hub/mail-to-me/issues">Report Bug</a>
     -
-    <a href="https://github.com/ARMcK-hub/Mail-To-Me/issues">Request Feature</a>
+    <a href="https://github.com/ARMcK-hub/mail-to-me/issues">Request Feature</a>
   </p>
 </p>
 
@@ -58,7 +58,7 @@ Version Author: Drew McKinney
 
 [![Product Name Screen Shot][product-screenshot]](https://mailtome.herokuapp.com/)
 
-Mail-To-Me is a HTML Form handler hosted on Heroku. Its Flask-driven infrastructure listens for Form Submissions and redirects the information to the receiving email designated in the Form Submission Data Packet. Forms can come from anywhere and be redirected to anyone! This gives flexibility and ease of use when using contact forms on static websites – like GitHub Pages! Feel free to give it a try by navigating to the Demo @ Demo-To-Me!
+Mail-To-Me is a HTML Form handler hosted on Heroku. Its Flask-driven infrastructure listens for Form Submissions and redirects the information to the receiving email designated in the Form Submission Data Packet. Forms can come from anywhere and be redirected to anyone! This gives flexibility and ease of use when using contact forms on static websites ï¿½ like GitHub Pages! Feel free to give it a try by navigating to the Demo @ Demo-To-Me!
 
 Here's why Mail-To-Me is important:
 * Offers an easy solution to using Contact Forms on static web pages
@@ -108,14 +108,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- Project Dynamic -->
-[license-shield]: https://img.shields.io/github/license/ARMcK-hub/Mail-To-Me.svg?style=flat
-[contributors-shield]: https://img.shields.io/github/contributors/ARMcK-hub/Mail-To-Me.svg?style=flat
-[contributors-url]: https://github.com/ARMcK-hub/Mail-To-Me/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ARMcK-hub/Mail-To-Me.svg?style=flat
-[forks-url]: https://github.com/ARMcK-hub/Mail-To-Me/network/members
-[stars-shield]: https://img.shields.io/github/stars/ARMcK-hub/Mail-To-Me.svg?style=flat
-[stars-url]: https://github.com/ARMcK-hub/Mail-To-Me/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ARMcK-hub/Mail-To-Me.svg?style=flat
-[issues-url]: https://github.com/ARMcK-hub/Mail-To-Me/issues
+[license-shield]: https://img.shields.io/github/license/ARMcK-hub/mail-to-me.svg?style=flat
+[contributors-shield]: https://img.shields.io/github/contributors/ARMcK-hub/mail-to-me.svg?style=flat
+[contributors-url]: https://github.com/ARMcK-hub/mail-to-me/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ARMcK-hub/mail-to-me.svg?style=flat
+[forks-url]: https://github.com/ARMcK-hub/mail-to-me/network/members
+[stars-shield]: https://img.shields.io/github/stars/ARMcK-hub/mail-to-me.svg?style=flat
+[stars-url]: https://github.com/ARMcK-hub/mail-to-me/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ARMcK-hub/mail-to-me.svg?style=flat
+[issues-url]: https://github.com/ARMcK-hub/mail-to-me/issues
 [product-screenshot]: https://armck-hub.github.io/images/mailtome.png
 
