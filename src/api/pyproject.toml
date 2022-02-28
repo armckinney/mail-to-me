@@ -3,6 +3,9 @@ name = "mail-to-me"
 version = "0.1.0"
 description = ""
 authors = ["armck-hub"]
+packages = [
+    { include = "mail_to_me" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"

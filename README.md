@@ -2,7 +2,7 @@
 <div align="center">
     <p>
     <!-- Header -->
-        <img width="100px" src="/static/Images/readme_logo.png"  alt="mail-to-me" />
+        <img width="100px" src="/static/images/readme_logo.png"  alt="mail-to-me" />
         <h2>Mail To Me</h2>
         <p><i>Webpage Form Handler</i></p>
     </p>

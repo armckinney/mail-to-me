@@ -2,5 +2,5 @@
 **
 
 # Add back in required Dockerfile artifacts with '!./file'
-!./pyproject.toml
-!./poetry.lock
+!./src/api/pyproject.toml
+!./src/api/poetry.lock

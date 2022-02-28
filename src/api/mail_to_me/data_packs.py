@@ -1,8 +1,8 @@
+from flask import request
+
 
 def form_dict(field_list):
-# collecting items from form and making data dictionary
-
-    from flask import request
+    # collecting items from form and making data dictionary
 
     form_data = {}
 
