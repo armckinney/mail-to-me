@@ -1,2 +1,0 @@
-p = "app"
-u = "xdtlegvp"

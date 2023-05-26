@@ -23,6 +23,7 @@
 		"ms-python.vscode-pylance",
 		"shd101wyy.markdown-preview-enhanced",
 		"janisdd.vscode-edit-csv",
-		"ms-dotnettools.csharp"
+		"ms-dotnettools.csharp",
+		"ritwickdey.liveserver"
 	]
 }
