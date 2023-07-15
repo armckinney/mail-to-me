@@ -109,6 +109,14 @@ resource "azurerm_container_app" "application" {
       image  = "${azurerm_container_registry.application.login_server}/${local.application}:latest"
       cpu    = 0.5
       memory = "1Gi"
+      env {
+        name        = "smtp_username"
+        secret_name = "smtp_username"
+      }
+      env {
+        name        = "smtp_password"
+        secret_name = "smtp_password"
+      }
     }
     min_replicas = 0
     max_replicas = 10
