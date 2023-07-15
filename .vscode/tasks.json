@@ -2,19 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Start Flask App",
-            "command": "poetry",
-            "isBackground": true,
-            "args": [
-                "run",
-                "python",
-                "main.py"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}/src/api"
-            }
-        },
-        {
             "label": "Start FastAPI App",
             "command": "poetry",
             "isBackground": true,
@@ -27,7 +14,7 @@
                 "--reload"
             ],
             "options": {
-                "cwd": "${workspaceFolder}/src/api"
+                "cwd": "${workspaceFolder}"
             }
         }
     ]
