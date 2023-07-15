@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mail-To-Me</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+  <style>
+    .navbar-light .navbar-brand {
+      color: rgba(113, 114, 114, 0.993)
+    }
+
+    .bg-img {
+      /* The image used */
+      background-image: url("../Images/Index_headerNEW2.png");
+
+      min-height: 200px;
+
+      /* Center and s
+        cale the image nicely */
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      /* Needed to position the navbar */
+      position: sticky;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-family: Segoe UI;
+      font-weight: normal;
+      color: rgba(113, 114, 114, 0.993);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-family: Segoe UI;
+      font-weight: normal;
+      color: rgba(113, 114, 114, 0.993);
+    }
+
+    body {
+      background-color: white;
+    }
+
+    img {
+      bottom: 16px;
+    }
+
+    fixed-wrap {
+      clip: rect(0, auto, auto, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4" style="color: red;"><i>Mail-To-Me</i></h1>
+      <p class="lead">HTML Forms Made Easy</p>
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="media">
+      <div class="media-body">
+        <h4 class="mt-0" style="color: goldenrod;">What am I?</h4>
+        <p>
+          Mail-To-Me is a hosted FastAPI Application that listens for HTML form submissions (like the one below) and
+          forwards the associated form data onto an indicated email address.
+        </p>
+        <br>
+        <center>
+          <p>
+            This is a live demo form. Try filling it in and clicking submit!
+          </p>
+        </center>
+      </div>
+    </div>
+
+    <form style="margin-bottom: 75px; margin-top: 25px;" method="post"
+      action="/submit?sender=do-not-reply-demo@mailtome.doesnotexist">
+      <div class=" form-row">
+        <div class="form-group col-md-12">
+          <label for="recipient">Email</label>
+          <input name="recipient" type="email" class="form-control" id="recipient">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="demo-subject">Subject</label>
+        <input name="subject" type="text" class="form-control" id="demo-subject"
+          placeholder="A Demo Test From Mail-To-Me">
+      </div>
+      <div class="form-group">
+        <label for="demo-message">Message</label>
+        <input name="message" type="text" class="form-control" id="demo-message"
+          placeholder="A Demo Message From Mail-To-Me">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0%;">
+    <div class="container">
+    </div>
+  </div>
+</body>
+
+</html>

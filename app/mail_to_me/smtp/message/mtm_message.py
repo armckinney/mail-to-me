@@ -20,9 +20,11 @@ class MTMMessage(SMTPMessage):
         For more information on Mail-To-Me visit: https://mailtome.herokuapp.com/</i></p>"""
 
     @classmethod
-    def _build_message(cls, message_params: Dict[str, str]):
+    def _build_message(cls, sender: str, receiver: str, message_params: Dict[str, str]):
         # building str message
         message = cls._get_header()
+
+        message += f"<p>sender: {sender}</p>"
 
         message += "\n".join(
             [f"<p>{key}: {value}</p>" for key, value in message_params.items()]
@@ -35,6 +37,3 @@ class MTMMessage(SMTPMessage):
         msg["Subject"] = "Mail-To-Me Automated Message"
 
         return msg.as_string()
-
-
-print(MTMMessage("ds", "ds", {}))

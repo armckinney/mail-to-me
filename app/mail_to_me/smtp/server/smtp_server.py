@@ -4,7 +4,7 @@ from smtplib import SMTP
 
 class SMTPServer(SMTP, ABC):
     def __init__(self) -> None:
-        super().__init__(self._get_host, self._get_port)
+        super().__init__(self._get_host(), self._get_port())
 
     def initialize(self, user, password):
         self.ehlo()

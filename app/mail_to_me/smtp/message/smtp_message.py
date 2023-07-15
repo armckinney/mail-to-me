@@ -22,7 +22,7 @@ class SMTPMessage(ABC):
         msg["From"] = sender
         msg["To"] = receiver
 
-        body = cls._build_message(message_params)
+        body = cls._build_message(sender, receiver, message_params)
 
         msg.attach(MIMEText(body, "plain"))
         # return msg.as_string()

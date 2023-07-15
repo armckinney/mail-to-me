@@ -9,5 +9,5 @@ class GmailSMTPServer(SMTPServer):
     def _get_host(self) -> str:
         return "smtp.gmail.com"
 
-    def _get_port(self) -> str:
+    def _get_port(self) -> int:
         return 587
