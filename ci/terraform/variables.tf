@@ -34,7 +34,7 @@ variable "smtp_password" {
 
 locals {
   application                  = "mailtome"
-  workspace_root               = "/workspaces/template-python"
+  workspace_root               = "/workspaces/mail-to-me"
   app_dockerfile_relative_path = "./app/Dockerfile"
   app_checksum                 = sha1(join("", [for f in fileset(path.module, "../../app/*") : filesha1(f)]))
   tags = {

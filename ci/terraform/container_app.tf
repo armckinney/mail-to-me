@@ -88,12 +88,12 @@ resource "azurerm_container_app" "application" {
   }
 
   secret {
-    name  = "smtp_username"
+    name  = "smtp-username"
     value = var.smtp_username
   }
 
   secret {
-    name  = "smtp_password"
+    name  = "smtp-password"
     value = var.smtp_password
   }
 
@@ -111,11 +111,11 @@ resource "azurerm_container_app" "application" {
       memory = "1Gi"
       env {
         name        = "smtp_username"
-        secret_name = "smtp_username"
+        secret_name = "smtp-username"
       }
       env {
         name        = "smtp_password"
-        secret_name = "smtp_password"
+        secret_name = "smtp-password"
       }
     }
     min_replicas = 0
