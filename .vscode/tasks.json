@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start FastAPI App",
+            "command": "poetry",
+            "isBackground": true,
+            "args": [
+                "run",
+                "uvicorn",
+                "main:app",
+                "--port",
+                "8000",
+                "--reload"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}

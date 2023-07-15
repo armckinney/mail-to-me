@@ -7,47 +7,58 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mail-To-Me</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
   <style>
     .navbar-light .navbar-brand {
-        color: rgba(113, 114, 114, 0.993)
+      color: rgba(113, 114, 114, 0.993)
     }
+
     .bg-img {
-        /* The image used */
-        background-image: url("../Images/Index_headerNEW2.png");
+      /* The image used */
+      background-image: url("../Images/Index_headerNEW2.png");
 
-        min-height: 200px;
+      min-height: 200px;
 
-        /* Center and s
+      /* Center and s
         cale the image nicely */
-        background-repeat: no-repeat;
-        background-size: cover;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-        /* Needed to position the navbar */
-        position: sticky;
+      /* Needed to position the navbar */
+      position: sticky;
     }
-    
+
     h1 {
-        margin-bottom: 15px;
-        font-family: Segoe UI;
-        font-weight: normal;
-        color:rgba(113, 114, 114, 0.993);
+      margin-bottom: 15px;
+      font-family: Segoe UI;
+      font-weight: normal;
+      color: rgba(113, 114, 114, 0.993);
     }
+
     h2 {
-        margin-bottom: 15px;
-        font-family: Segoe UI;
-        font-weight: normal;
-        color:rgba(113, 114, 114, 0.993);
+      margin-bottom: 15px;
+      font-family: Segoe UI;
+      font-weight: normal;
+      color: rgba(113, 114, 114, 0.993);
     }
+
     body {
-        background-color: white;
+      background-color: white;
     }
-    img { 
-        bottom: 16px;
+
+    img {
+      bottom: 16px;
     }
+
     fixed-wrap {
       clip: rect(0, auto, auto, 0);
       position: absolute;
@@ -65,22 +76,28 @@
     <div class="container">
       <h1 class="display-4" style="color: red;"><i>Mail-To-Me</i></h1>
       <p class="lead">HTML Forms Made Easy</p>
-      <a href="https://armckinney.github.io/Demo-To-Me/" target="_blank"><button type="button" class="btn btn-warning"><i>Try Demo Form!</i></button></a>
+      <a href="/demo">
+        <button type="button" class="btn btn-warning">
+          <i>Try Demo Form!</i>
+        </button>
+      </a>
     </div>
   </div>
 
 
   <div class="container">
 
-
     <div class="media">
       <div class="media-body">
         <h4 class="mt-0" style="color: goldenrod;">What am I?</h4>
-        <p>Mail-To-Me is a hosted Flask Application that listens for HTML form submissions (like the one below) and forwards the associated form data onto an indicated email address.</p>
+        <p>
+          Mail-To-Me is a hosted FastAPI Application that listens for HTML form submissions (like the one below) and
+          forwards the associated form data onto an indicated email address.
+        </p>
       </div>
     </div>
 
-    <form  style="margin-bottom: 75px; margin-top: 25px;">
+    <form style="margin-bottom: 75px; margin-top: 25px;">
       <div class="form-row">
         <div class="form-group col-md-12">
           <label for="inputEmail4">Email</label>
@@ -100,17 +117,21 @@
 
     <div class="row">
       <div class="media col-md-6" style="margin-bottom: 75px;">
-        <img src="../../static/Images/mailtome_pfd_crop.png" class="mr-3" alt="..." style="max-width: 100%;">
+        <img src="{{ url_for('static', path='images/mailtome_pfd_crop.png') }}" class="mr-3" alt="..."
+          style="max-width: 100%;">
       </div>
       <div class="media-body col-md-6" style="width: 100%; margin-bottom: 75px;">
         <h4 class="mt-0" style="color: blue;">How do I work?</h4>
         1. An HTML Form is filled out by a user, the user submits the form.
         <br>
-        2. The form submission is redirected to the Mail-To-Me Heroku App - endpoint: mailtome.herokuapp.com/receiving_email/field_list
+        2. The form submission is redirected to the Mail-To-Me Heroku App - endpoint:
+        mailtome.herokuapp.com/receiving_email/field_list
         <br>
-        3. The Flask app sends the collected field list to a requesting script that collects the form data into a data packet. The data packet is returned to the primary Flask app.
+        3. The Flask app sends the collected field list to a requesting script that collects the form data into a data
+        packet. The data packet is returned to the primary Flask app.
         <br>
-        4. The Flask app sends the data packet to a python script which utilizes an smtp request to send an email to the receiving email containing the data packet.
+        4. The Flask app sends the data packet to a python script which utilizes an smtp request to send an email to the
+        receiving email containing the data packet.
         <br>
         5. POOF! Your form data has been delivered to your inbox!
       </div>
@@ -120,14 +141,15 @@
       <div class="media col-md-12">
         <div class="media-body">
           <h4 class="mt-0" style="color: green;">How do I used Mail-To-Me?</h4>
-            Mail-To-Me is easy to start using. There is no back-end to set up to start receiving emails.
-            <br><br>
+          Mail-To-Me is easy to start using. There is no back-end to set up to start receiving emails.
+          <br><br>
 
-            In order to start receiving emails:
-            <br>
-            1. Find the HTML form you would like to submit data from.
-            <br>
-            2. Enter ensure that your form has the following <strong style="color: red;">criteria</strong>:
+          In order to start receiving emails:
+          <br>
+          1. Find the HTML form you would like to submit data from.
+          <br>
+          2. Enter ensure that your form has the following <strong style="color: red;">criteria</strong><strong
+            style="color: green;">(s)</strong>
         </div>
       </div>
     </div>
@@ -141,13 +163,13 @@
             &lt;div class="inner">
               &lt;section>
                   &lt;h4>Contact&lt;/h4>
-                    &lt;form <strong style="color: red;">method="post" action="https://mailtome.herokuapp.com/form_submit/&lt;your_email_address>/&lt;your_field_list></strong>>
+                    &lt;form <strong style="color: red;">method="post" action="https://mailtome.herokuapp.com/submit?sender=&lt;your_email_address></strong>>
                       &lt;div class="row gtr-uniform">
                     &lt;div class="col-6 col-12-xsmall">
                       &lt;input type="text" name="Name" id="demo-name" value="" placeholder="Name" />
                     &lt;/div>
                     &lt;div class="col-6 col-12-xsmall">
-                        &lt;input type="email" <strong style="color: green;">name="sender_email"</strong> id="demo-email" value="" placeholder="Email" />
+                        &lt;input type="email" <strong style="color: green;">name="recipient"</strong> id="demo-email" value="" placeholder="Email" />
                       &lt;/div>
                       &lt;div class="col-12 col-12-xsmall">
                         &lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Subject" />
@@ -175,40 +197,40 @@
         </pre>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-md-12" style="margin-bottom: 100px;">
-            <h3>Notes:</h3>
-            <ul>
-              <li>Method Must be "post"</li>
-              <li>Action must go to specified Route shown</li>
-                <ul>
-                  <li>Fill in your_email_address with the designated receiving email address</li>
-                  <li>Fill in the field list with the TEXT based fields in your form. There is only 1 required field that must be sent - sender_email. "sender_email" MUST be labeled as such in both the field list and in the input name.</li>
-                </ul>
-              <li>All Form Inputs Fields must have the corresponding name given to them. i.e. if I place "Subject" in the field_list then I must have an input field that has name="Subject".</li>
-              <li>Example(s):</li>
-                <ul>
-                  <li class="text-break">action="https://mailtome.herokuapp.com/form_submit/john_doe@gmail.com/Name,Subject,Message,sender_email"</li>
-                  <li>&lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Subject" /></li>
-                </ul>
-            </ul>
-        </div>
+        <h3>Notes:</h3>
+        <ul>
+          <li>Method Must be "post"</li>
+          <li>Action must go to specified Route shown</li>
+          <ul>
+            <li>Fill in
+              <code>
+              <strong style="color: red;">&lt;your_email_address></strong>
+              </code>
+              with the designated receiving email address
+            </li>
+            <li>There is only 1 required field that must be sent - recipient. "recipient" MUST be labeled as such in the
+              input name.</li>
+          </ul>
+          <li>Example(s):</li>
+          <ul>
+            <li class="text-break">
+              action="/submit/john_doe@gmail.com/Name,Subject,Message,sender_email"
+            </li>
+            <li>&lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Message" /></li>
+          </ul>
+        </ul>
       </div>
+    </div>
 
   </div>
-  
+
   <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0%;">
     <div class="container">
-    <h1 class="display-4">About The Developer</h1>
-      <p class="lead">Drew McKinney</p>
-      <p>LinkedIn: https://www.linkedin.com/in/drew-mckinney/</p>
-      <p>GitHub: https://github.com/armckinney</p>
-      <p>Demo Project Repository: https://github.com/armckinney/Demo-To-Me</p>
-      <p>Mail-To-Me Project Repository: https://github.com/armckinney/mail-to-me</p>
     </div>
   </div>
 </body>
 
 </html>
-

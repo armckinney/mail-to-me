@@ -2,7 +2,7 @@
 <div align="center">
     <p>
     <!-- Header -->
-        <img width="100px" src="/static/Images/readme_logo.png"  alt="mail-to-me" />
+        <img width="100px" src="/static/images/readme_logo.png"  alt="mail-to-me" />
         <h2>Mail To Me</h2>
         <p><i>Webpage Form Handler</i></p>
     </p>
@@ -40,11 +40,7 @@
 <br>
 
 <!-- Description -->
-Mail-To-Me is a HTML Form handler hosted on Heroku. Its Flask-driven infrastructure listens for Form Submissions and redirects the information to the receiving email designated in the Form Submission Data Packet. Forms can come from anywhere and be redirected to anyone! This gives flexibility and ease of use when using contact forms on static websites like GitHub Pages! Feel free to give it a try by navigating to the Demo @ Demo-To-Me!
+Mail-To-Me is a HTML Form handler. Its FastAPI-driven infrastructure listens for Form Submissions and redirects the information to the receiving email designated in the Form Submission Data Packet. Forms can come from anywhere and be redirected to anyone! This gives flexibility and ease of use when using contact forms on static websites like GitHub Pages! 
 
 Here's why Mail-To-Me is important:
 * Offers an easy solution to using Contact Forms on static web pages
-
-
-### Building for Heroku Deployment
-Heroku requires a `requirements.txt` in the root directory and Continuous Deployment is not configured for this repository. Thus, a manual dump of dependencies is required via executing `poetry export -f requirements.txt -o requirements.txt --without-hashes` prior to deploying on Heroku.
