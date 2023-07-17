@@ -163,13 +163,13 @@
             &lt;div class="inner">
               &lt;section>
                   &lt;h4>Contact&lt;/h4>
-                    &lt;form <strong style="color: red;">method="post" action="https://mailtome.herokuapp.com/submit?sender=&lt;your_email_address></strong>>
+                    &lt;form <strong style="color: red;">method="post" action="https://mailtome.armckinney.com/submit?recipient=&lt;your_email_address></strong>>
                       &lt;div class="row gtr-uniform">
                     &lt;div class="col-6 col-12-xsmall">
                       &lt;input type="text" name="Name" id="demo-name" value="" placeholder="Name" />
                     &lt;/div>
                     &lt;div class="col-6 col-12-xsmall">
-                        &lt;input type="email" <strong style="color: green;">name="recipient"</strong> id="demo-email" value="" placeholder="Email" />
+                        &lt;input type="email" <strong style="color: green;">name="sender"</strong> id="demo-email" value="" placeholder="Email" />
                       &lt;/div>
                       &lt;div class="col-12 col-12-xsmall">
                         &lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Subject" />
@@ -212,12 +212,12 @@
               with the designated receiving email address
             </li>
             <li>There is only 1 required field that must be sent - recipient. "recipient" MUST be labeled as such in the
-              input name.</li>
+              input name or as a query parameter in the post uri.</li>
           </ul>
           <li>Example(s):</li>
           <ul>
             <li class="text-break">
-              action="/submit/john_doe@gmail.com/Name,Subject,Message,sender_email"
+              action="https://mailtome.armckinney.com/submit?recipient=john_doe@gmail.com"
             </li>
             <li>&lt;input type="text" name="Subject" id="demo-message" value="" placeholder="Message" /></li>
           </ul>
