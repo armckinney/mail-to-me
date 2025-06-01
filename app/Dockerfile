@@ -1,8 +1,8 @@
-FROM armck/python-base:2.0
+FROM armck/python:3.9.5
 
 LABEL   deployable="true" \
         decription="This is the deployable version of the WEF application container. \
-                    It only includes nessecary items to run the application."
+        It only includes nessecary items to run the application."
 
 # Set Working Directory
 ENV WORKDIR=/west-end-financial

@@ -1,0 +1,59 @@
+name: wf-destroy-containerapp-prod
+
+env:
+  CONFIGURATION: 'containerapp'
+  ENVIRONMENT: 'prod'
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  setup-env:
+    runs-on: ubuntu-24.04
+    outputs:
+        configuration: ${{ steps.env.outputs.configuration }}
+        environment: ${{ steps.env.outputs.environment }}
+    steps:
+      - name: Setup environment variables
+        id: env
+        run: |
+          echo "configuration=$CONFIGURATION" >> "$GITHUB_OUTPUT"
+          echo "environment=$ENVIRONMENT" >> "$GITHUB_OUTPUT"
+
+  static-analysis:
+    needs: setup-env
+    uses: armckinney/cicd/.github/workflows/rwf-terraform-static-analysis.yaml@main
+    with:
+      container_image: armck/terraform-azure:2.73.0
+      configuration: ${{ needs.setup-env.outputs.configuration }}
+      environment: ${{ needs.setup-env.outputs.environment }}
+
+  terraform-show:
+    needs: [setup-env, static-analysis]
+    uses: armckinney/cicd/.github/workflows/rwf-terraform-show.yaml@main
+    with:
+      container_image: armck/terraform-azure:2.73.0
+      configuration: ${{ needs.setup-env.outputs.configuration }}
+      environment: ${{ needs.setup-env.outputs.environment }}
+    secrets:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+
+  terraform-destroy:
+    needs: [setup-env, terraform-show]
+    uses: armckinney/cicd/.github/workflows/rwf-terraform-destroy.yaml@main
+    with:
+      container_image: armck/terraform-azure:2.73.0
+      configuration: ${{ needs.setup-env.outputs.configuration }}
+      environment: ${{ needs.setup-env.outputs.environment }}
+    secrets:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
