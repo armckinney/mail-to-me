@@ -1,1 +1,1 @@
-Resolve-4-Merge-Demo-To-Me-Project
+Resolve-7-Migrate-ACR-to-DockerHub
