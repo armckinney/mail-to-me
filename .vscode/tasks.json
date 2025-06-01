@@ -14,7 +14,7 @@
                 "--reload"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}/app"
             }
         }
     ]

@@ -1,0 +1,4 @@
+resource_group_name  = "rg-admin-prod"
+storage_account_name = "stadminsprod"
+container_name       = "terraform"
+key                  = "mailtome/prod.tfstate"

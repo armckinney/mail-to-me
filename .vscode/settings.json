@@ -16,7 +16,7 @@
         "**/.vs": true
     },
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
     "editor.formatOnSave": true,
     "python.terminal.activateEnvInCurrentTerminal": false,
