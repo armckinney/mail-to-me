@@ -1,7 +1,6 @@
 name: wf-cd-containerapp-prod
 
 env:
-  DOCKERHUB_ID: 'armck'
   CONFIGURATION: 'containerapp'
   ENVIRONMENT: 'prod'
   APP_DOCKERFILE: 'app/Dockerfile'
@@ -19,7 +18,6 @@ jobs:
   setup-env:
     runs-on: ubuntu-24.04
     outputs:
-        dockerhub_id: ${{ steps.env.outputs.dockerhub_id }}
         configuration: ${{ steps.env.outputs.configuration }}
         environment: ${{ steps.env.outputs.environment }}
         app_dockerfile: ${{ steps.env.outputs.app_dockerfile }}
@@ -28,7 +26,6 @@ jobs:
       - name: Setup environment variables
         id: env
         run: |
-          echo "dockerhub_id=$DOCKERHUB_ID" >> "$GITHUB_OUTPUT"
           echo "configuration=$CONFIGURATION" >> "$GITHUB_OUTPUT"
           echo "environment=$ENVIRONMENT" >> "$GITHUB_OUTPUT"
           echo "app_dockerfile=$APP_DOCKERFILE" >> "$GITHUB_OUTPUT"
@@ -38,12 +35,9 @@ jobs:
     needs: setup-env
     uses: armckinney/cicd/.github/workflows/rwf-container-build-and-push.yaml@main
     with:
-      dockerhub_id: ${{ needs.setup-env.outputs.dockerhub_id }}
       dockerfile: ${{ needs.setup-env.outputs.app_dockerfile }}
       image_name: ${{ github.event.repository.name }}
       image_tag: ${{ needs.setup-env.outputs.app_image_tag }}
-    secrets:
-      DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
   terraform-deployment-ci:
     needs: [setup-env, app-container-build-and-push]
