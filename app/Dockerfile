@@ -1,4 +1,4 @@
-FROM armck/python:3.9.5
+FROM ghcr.io/armckinney/python:3.9.5
 
 LABEL   deployable="true" \
         decription="This is the deployable version of the WEF application container. \

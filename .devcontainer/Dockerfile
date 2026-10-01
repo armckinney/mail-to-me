@@ -1,4 +1,4 @@
-FROM armck/python:3.9.5
+FROM ghcr.io/armckinney/python:3.9.5
 
 ARG TERRAFORM_VERSION=1.10.5
 

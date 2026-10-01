@@ -28,7 +28,7 @@ jobs:
     needs: setup-env
     uses: armckinney/cicd/.github/workflows/rwf-terraform-static-analysis.yaml@main
     with:
-      container_image: armck/terraform-azure:2.73.0
+      container_image: ghcr.io/armckinney/terraform-azure:2.73.0
       configuration: ${{ needs.setup-env.outputs.configuration }}
       environment: ${{ needs.setup-env.outputs.environment }}
 
@@ -36,7 +36,7 @@ jobs:
     needs: [setup-env, static-analysis]
     uses: armckinney/cicd/.github/workflows/rwf-terraform-show.yaml@main
     with:
-      container_image: armck/terraform-azure:2.73.0
+      container_image: ghcr.io/armckinney/terraform-azure:2.73.0
       configuration: ${{ needs.setup-env.outputs.configuration }}
       environment: ${{ needs.setup-env.outputs.environment }}
     secrets:
@@ -49,7 +49,7 @@ jobs:
     needs: [setup-env, terraform-show]
     uses: armckinney/cicd/.github/workflows/rwf-terraform-destroy.yaml@main
     with:
-      container_image: armck/terraform-azure:2.73.0
+      container_image: ghcr.io/armckinney/terraform-azure:2.73.0
       configuration: ${{ needs.setup-env.outputs.configuration }}
       environment: ${{ needs.setup-env.outputs.environment }}
     secrets:

@@ -43,7 +43,7 @@ jobs:
     needs: [setup-env, app-container-build-and-push]
     uses: armckinney/cicd/.github/workflows/rwf-terraform-auto-apply.yaml@main
     with:
-      container_image: armck/terraform-azure:2.73.0
+      container_image: ghcr.io/armckinney/terraform-azure:2.73.0
       configuration: ${{ needs.setup-env.outputs.configuration }}
       environment: ${{ needs.setup-env.outputs.environment }}
     secrets:
